@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <label for="id_username">Firstname:</label>
+    <input type="text" name="huh" id="heh">
+    {{ form.firstname }}<br>
+
+    <label for="id_email">Lastname:</label>
+
+    <input type="text" name="lst" id="lst">
+    {{ form.lastname }}<br>
+
+    <label for="id_age">Phone:</label>
+    <input type="text" name="" id="">
+    {{ form.phone }}<br>
+<label for="id_age">Date:</label>
+    <input type="date" name="" id="">
+    {{ form.joined_date }}<br>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

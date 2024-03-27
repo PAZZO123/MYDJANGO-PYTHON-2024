@@ -1,0 +1,25 @@
+{% extends "master.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+    <meta charset="UTF-8">
+    <title>Members</title>
+</head>
+<body>
+
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% block content %}
+  <div class="mycard">
+    <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+    <p>Phone {{ mymember.phone }}</p>
+    <p>Member since: {{ mymember.joined_date }}</p>
+  </div>
+{% endblock %}
+</body>
+</html>

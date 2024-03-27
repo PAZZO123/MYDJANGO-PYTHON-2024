@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for x in fruits %}
+  <h1>{{ x }}</h1>
+{% if forloop.last %}
+        style='background-color:lightblue;'
+      {% endif %}
+{% endfor %}
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting == 2 %}
+  <h1>Welcome</h1>
+{% else %}
+  <h1>Goodbye</h1>
+{% endif %}
+
+<p>In views.py you can see what the fruits variable looks like.</p>
+{% include 'footer.html' %}
+{# huh #}
+</body>
+</html>
